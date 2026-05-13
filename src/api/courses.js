@@ -1,0 +1,248 @@
+const courses = [
+  {
+    id: 1,
+    name: 'React Foundations',
+    instructor: 'Maya Srinivasan',
+    duration: '6 weeks',
+    category: 'Web Development',
+    rating: 4.8,
+    level: 'Beginner',
+    lessons: 42,
+    description:
+      'Build your first React apps from scratch. You will learn components, hooks, state management, and the fundamentals of the React ecosystem through hands-on projects.',
+  },
+  {
+    id: 2,
+    name: 'Data Analytics with Python',
+    instructor: 'Arjun Mehta',
+    duration: '8 weeks',
+    category: 'Data Science',
+    rating: 4.7,
+    level: 'Intermediate',
+    lessons: 56,
+    description:
+      'Master data wrangling, visualization, and statistical analysis using pandas, NumPy, and Matplotlib. Real-world datasets are used throughout every module.',
+  },
+  {
+    id: 3,
+    name: 'UX Research Essentials',
+    instructor: 'Nina Kapoor',
+    duration: '4 weeks',
+    category: 'Design',
+    rating: 4.5,
+    level: 'Beginner',
+    lessons: 28,
+    description:
+      'Learn how to plan and run user research studies, synthesize findings, and translate insights into actionable design decisions for your team.',
+  },
+  {
+    id: 4,
+    name: 'Cloud Architecture on AWS',
+    instructor: 'Dev Shah',
+    duration: '10 weeks',
+    category: 'Cloud Computing',
+    rating: 4.9,
+    level: 'Advanced',
+    lessons: 64,
+    description:
+      'Design highly available, fault-tolerant systems on AWS. Covers VPC, IAM, EC2, S3, RDS, Lambda, and architecture best practices for production workloads.',
+  },
+  {
+    id: 5,
+    name: 'Product Management Sprint',
+    instructor: 'Rhea Thomas',
+    duration: '5 weeks',
+    category: 'Business',
+    rating: 4.6,
+    level: 'Intermediate',
+    lessons: 35,
+    description:
+      'A fast-paced program covering roadmapping, prioritization frameworks, stakeholder communication, and launching features with cross-functional teams.',
+  },
+  {
+    id: 6,
+    name: 'Machine Learning Bootcamp',
+    instructor: 'Arjun Mehta',
+    duration: '12 weeks',
+    category: 'Data Science',
+    rating: 4.9,
+    level: 'Advanced',
+    lessons: 78,
+    description:
+      'Go from linear regression to deep learning. Topics include supervised and unsupervised learning, neural networks, model evaluation, and deployment with scikit-learn and TensorFlow.',
+  },
+  {
+    id: 7,
+    name: 'JavaScript Interview Prep',
+    instructor: 'Maya Srinivasan',
+    duration: '3 weeks',
+    category: 'Web Development',
+    rating: 4.4,
+    level: 'Intermediate',
+    lessons: 24,
+    description:
+      'Crack JavaScript interviews at top tech companies. Covers closures, prototypes, async/await, DOM APIs, and common algorithmic patterns asked in frontend rounds.',
+  },
+  {
+    id: 8,
+    name: 'Digital Marketing Strategy',
+    instructor: 'Kabir Rao',
+    duration: '7 weeks',
+    category: 'Marketing',
+    rating: 4.3,
+    level: 'Beginner',
+    lessons: 40,
+    description:
+      'Build a full digital marketing toolkit: SEO, SEM, content marketing, social media strategy, email campaigns, and how to measure ROI across channels.',
+  },
+  {
+    id: 9,
+    name: 'Figma for Product Teams',
+    instructor: 'Nina Kapoor',
+    duration: '4 weeks',
+    category: 'Design',
+    rating: 4.7,
+    level: 'Intermediate',
+    lessons: 31,
+    description:
+      'Master Figma from components and auto-layout to prototyping and design systems. Built for designers and product managers who collaborate on shipped products.',
+  },
+  {
+    id: 10,
+    name: 'Cybersecurity Fundamentals',
+    instructor: 'Zara Fernandes',
+    duration: '9 weeks',
+    category: 'Security',
+    rating: 4.6,
+    level: 'Beginner',
+    lessons: 52,
+    description:
+      'Understand threats, vulnerabilities, and defenses. Covers network security, cryptography, ethical hacking basics, and security frameworks like NIST and ISO 27001.',
+  },
+  {
+    id: 11,
+    name: 'Advanced Node.js APIs',
+    instructor: 'Dev Shah',
+    duration: '6 weeks',
+    category: 'Web Development',
+    rating: 4.8,
+    level: 'Advanced',
+    lessons: 45,
+    description:
+      'Build production-grade REST and GraphQL APIs with Node.js, Express, and Fastify. Covers authentication, caching, rate limiting, testing, and Docker deployment.',
+  },
+  {
+    id: 12,
+    name: 'Financial Modeling Basics',
+    instructor: 'Rhea Thomas',
+    duration: '5 weeks',
+    category: 'Business',
+    rating: 4.2,
+    level: 'Beginner',
+    lessons: 33,
+    description:
+      'Learn to build Excel-based financial models from scratch. Topics include DCF analysis, scenario planning, sensitivity tables, and presenting models to stakeholders.',
+  },
+  {
+    id: 13,
+    name: 'TypeScript Deep Dive',
+    instructor: 'Maya Srinivasan',
+    duration: '5 weeks',
+    category: 'Web Development',
+    rating: 4.8,
+    level: 'Intermediate',
+    lessons: 38,
+    description:
+      'Move beyond basic types into generics, conditional types, mapped types, and module augmentation. Practical exercises use real-world React and Node.js codebases.',
+  },
+  {
+    id: 14,
+    name: 'SQL for Data Analysts',
+    instructor: 'Arjun Mehta',
+    duration: '4 weeks',
+    category: 'Data Science',
+    rating: 4.6,
+    level: 'Beginner',
+    lessons: 29,
+    description:
+      'Write complex queries with confidence. Covers JOINs, window functions, CTEs, query optimization, and translating business questions into actionable SQL reports.',
+  },
+  {
+    id: 15,
+    name: 'Ethical Hacking & Penetration Testing',
+    instructor: 'Zara Fernandes',
+    duration: '11 weeks',
+    category: 'Security',
+    rating: 4.8,
+    level: 'Advanced',
+    lessons: 67,
+    description:
+      'Learn offensive security techniques used by professionals: reconnaissance, exploitation, privilege escalation, and writing detailed penetration testing reports.',
+  },
+  {
+    id: 16,
+    name: 'Motion Design in After Effects',
+    instructor: 'Nina Kapoor',
+    duration: '6 weeks',
+    category: 'Design',
+    rating: 4.5,
+    level: 'Beginner',
+    lessons: 36,
+    description:
+      'Create stunning motion graphics and animated explainer videos. Covers keyframing, easing, masks, shape layers, and exporting for web and social media.',
+  },
+  {
+    id: 17,
+    name: 'Kubernetes in Production',
+    instructor: 'Dev Shah',
+    duration: '8 weeks',
+    category: 'Cloud Computing',
+    rating: 4.7,
+    level: 'Advanced',
+    lessons: 55,
+    description:
+      'Deploy, scale, and manage containerized applications on Kubernetes. Covers pods, services, ingress, Helm, CI/CD integration, and cluster observability.',
+  },
+  {
+    id: 18,
+    name: 'Growth Marketing & Analytics',
+    instructor: 'Kabir Rao',
+    duration: '6 weeks',
+    category: 'Marketing',
+    rating: 4.5,
+    level: 'Intermediate',
+    lessons: 44,
+    description:
+      'Run data-driven growth experiments across acquisition, activation, retention, and revenue funnels. Includes A/B testing, cohort analysis, and funnel optimization.',
+  },
+  {
+    id: 19,
+    name: 'Leadership & Team Management',
+    instructor: 'Rhea Thomas',
+    duration: '4 weeks',
+    category: 'Business',
+    rating: 4.4,
+    level: 'Intermediate',
+    lessons: 26,
+    description:
+      'Develop the skills to lead high-performing teams. Topics include giving feedback, running effective 1:1s, managing conflict, and building psychological safety.',
+  },
+  {
+    id: 20,
+    name: 'Next.js Full-Stack Development',
+    instructor: 'Maya Srinivasan',
+    duration: '9 weeks',
+    category: 'Web Development',
+    rating: 4.9,
+    level: 'Advanced',
+    lessons: 61,
+    description:
+      'Build full-stack applications with Next.js 14, the App Router, React Server Components, Prisma, and Vercel deployment. Ship a complete SaaS product by the end.',
+  },
+];
+
+export function fetchCourses() {
+  return new Promise((resolve) => {
+    window.setTimeout(() => resolve(courses), 550);
+  });
+}
